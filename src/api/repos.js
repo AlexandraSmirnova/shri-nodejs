@@ -8,7 +8,6 @@ const router = express.Router();
 
 router.use(express.json());
 
-
 router.get('/', (req, res) => {
     fs.readdir(process.env.DIR, (err, items) => {
         if (err) {
@@ -27,7 +26,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:repositoryId/commits/:commitHash?', (req, res) => {
-    const onError = (err) => res.json({ 'error': err });
+    const onError = (err) => res.status(404).end();
     const onSuccess = (out) => {
         const info = out.split('\n')
             .filter((i) => i !== "")
@@ -53,7 +52,7 @@ router.get('/:repositoryId/commits/:commitHash?', (req, res) => {
 });
 
 router.get('/:repositoryId/commits/:commitHash/diff', (req, res) => {
-    const onError = (err) => res.status(404);
+    const onError = (err) => res.status(404).end();
     const onSuccess = (out) => {
         res.json({ diff: out });
     }
@@ -61,8 +60,8 @@ router.get('/:repositoryId/commits/:commitHash/diff', (req, res) => {
     gitUtils.diff(req.params.repositoryId, req.params.commitHash, onError, onSuccess);
 });
 
-router.get(['/:repositoryId/', '/:repositoryId/tree/:commitHash/:path([^/]*)'], (req, res) => {
-    const onError = (err) => res.status(404);
+router.get(['/:repositoryId/', '/:repositoryId/tree/:commitHash/:path([^/]*)?'], (req, res) => {
+    const onError = (err) => res.status(404).end();
     const onSuccess = (out) => {
         res.json(out.split('\n').filter((i) => i));
     }
@@ -71,7 +70,7 @@ router.get(['/:repositoryId/', '/:repositoryId/tree/:commitHash/:path([^/]*)'], 
 });
 
 router.get('/:repositoryId/blob/:commitHash?/:pathToFile([^/]*)', (req, res) => {
-    const onError = (err) => res.status(404);
+    const onError = (err) => res.status(404).end();
     const onSuccess = (out) => {
         res.set('Content-type: application/octet-stream');
         res.send(out);
@@ -87,12 +86,12 @@ router.delete('/:repositoryId', (req, res) => {
         deleteFolderRecursive(repPath);
         res.send(`Repository ${repPath} successfully deleted`);
     } else {
-        res.status(404);
+        res.status(404).end();
     }
 });
 
 router.post('/:repositoryId?', (req, res) => {
-    const onError = (err) => res.status(404);
+    const onError = (err) => res.status(404).end();
     const onSuccess = (out) => {
         res.send(`Repository ${req.body.url} successfully added`);
     }

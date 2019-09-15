@@ -1,68 +1,43 @@
 const { exec } = require('child_process');
 const { getRepositoryPath } = require('./fsUtils');
 
-const log = (repositoryId, commitHash, args, onError, onSuccess) => {
-    const repositoryPath = getRepositoryPath(repositoryId);
-
-    exec(`cd ${repositoryPath} && git log ${commitHash || ""} ${args}`, (err, out) => {
+const execWrapper = (command, path, onError, onSuccess) => {
+    exec(command, { cwd: path }, (err, stdout, stderr) => {
         if (err) {
             onError(err);
             return;
         }
-       
-        onSuccess(out);
-    });
+        onSuccess(stdout);
+    })
+}
+
+const log = (repositoryId, commitHash, args, onError, onSuccess) => {
+    const repositoryPath = getRepositoryPath(repositoryId);
+
+    execWrapper(`git log ${commitHash || ""} ${args}`, repositoryPath, onError, onSuccess);
 };
 
 const diff = (repositoryId, args, onError, onSuccess) => {
     const repositoryPath = getRepositoryPath(repositoryId);
 
-    exec(`cd ${repositoryPath} && git diff ${args}`, (err, out) => {
-        if (err) {
-            onError(err);
-            return;
-        }
-       
-        onSuccess(out);
-    });
+    execWrapper(`git diff ${args}`, repositoryPath, onError, onSuccess);
 };
 
 const showTree = (repositoryId, commitHash, path, onError, onSuccess) => {
     const repositoryPath = getRepositoryPath(repositoryId);
-    const pathParams = commitHash && path ? `${commitHash} ${path}` : "master";
+    const pathParams = commitHash ? `${commitHash} ${path || ""}` : "master";
 
-    exec(`cd ${repositoryPath} && git ls-tree --full-tree --name-only ${pathParams}`, (err, out) => {
-        if (err) {
-            onError(err);
-            return;
-        }
-       
-        onSuccess(out);
-    });
+    execWrapper(`git ls-tree --full-tree --name-only ${pathParams}`, repositoryPath, onError, onSuccess);
 };
 
 const showFileContent = (repositoryId, commitHash, path, onError, onSuccess) => {
     const repositoryPath = getRepositoryPath(repositoryId);
 
-    exec(`cd ${repositoryPath} && git show ${commitHash || "HEAD"}:${path}`, (err, out) => {
-        if (err) {
-            onError(err);
-            return;
-        }
-       
-        onSuccess(out);
-    });
+    execWrapper(`git show ${commitHash || "HEAD"}:${path}`, repositoryPath, onError, onSuccess);
 };
 
 const clone = (url, repositoryId, onError, onSuccess) => {
-    exec(`cd ${process.env.DIR} && git clone ${url} ${repositoryId || ""}`, (err, out) => {
-        if (err) {
-            onError(err);
-            return;
-        }
-       
-        onSuccess(out);
-    });
+    execWrapper(`git clone ${url} ${repositoryId || ""}`, process.env.DIR, onError, onSuccess);
 }
 
 module.exports = {

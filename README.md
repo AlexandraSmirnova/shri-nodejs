@@ -4,5 +4,5 @@
 
 ```
 yarn
-node ./index.js <path_to_dir>
+yarn start <path_to_dir>
 ```

@@ -4,7 +4,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node ./src/index.js",
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "lint": "eslint src/**/*.js"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -15,6 +16,7 @@
     "posthtml-include": "^1.2.0"
   },
   "devDependencies": {
+    "eslint": "^6.4.0",
     "nodemon": "^1.19.2"
   }
 }

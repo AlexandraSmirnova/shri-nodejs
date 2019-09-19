@@ -1,0 +1,28 @@
+.Breadcrumbs {
+    font-size: 0px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.Breadcrumbs .Breadcrumbs-Item {
+    display: inline-block;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.Breadcrumbs .Breadcrumbs-Item:after {
+    content: '/';
+    padding: 0 10px;
+}
+
+.Breadcrumbs .Breadcrumbs-Item:last-child:after {
+    content: '';
+    padding: 0;
+}
+
+
+.Breadcrumbs-Item.Breadcrumbs-Item_state_open {
+    font-weight: bold;
+    color: var(--color-text-primary);
+}

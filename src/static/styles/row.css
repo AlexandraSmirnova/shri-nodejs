@@ -1,0 +1,29 @@
+.Row {
+    display: flex;
+    flex-direction: row;
+    padding: 14px 0;
+    border-top: 1px solid var(--color-border);
+    line-height: 20px;
+}
+
+.Row .Row-Item {
+    flex: 1;
+}
+
+.Row-Item.Row-Item_align_right {
+    text-align: right;
+}
+
+
+@media (max-width: 360px) {
+    .Row {
+        flex-direction: column;
+    }
+
+    .Row-Item.Row-Item_align_right {
+        text-align: left;
+    }
+}
+.Row-Item.Row-Item_fraction_col-2 {
+    flex: 2
+}

@@ -1,0 +1,13 @@
+.RepositoryTable {
+}
+
+.RepositoryTable-Head {
+    color: var(--color-text-gray);
+    font-weight: bold;
+}
+
+@media (max-width: 360px) {
+    .RepositoryTable-Head {
+        display: none;
+    }
+}

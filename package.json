@@ -13,6 +13,7 @@
     "posthtml": "^0.11.6",
     "posthtml-bem": "^0.2.2",
     "posthtml-expressions": "^1.1.1",
+    "posthtml-extend": "^0.3.0",
     "posthtml-include": "^1.2.0"
   },
   "devDependencies": {

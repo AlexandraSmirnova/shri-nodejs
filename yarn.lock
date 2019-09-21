@@ -2169,6 +2169,14 @@ posthtml-expressions@^1.1.1:
   dependencies:
     fclone "^1.0.11"
 
+posthtml-extend@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/posthtml-extend/-/posthtml-extend-0.3.0.tgz#c4ed698d4cbee5268097d07557b01e9b137e38c0"
+  integrity sha512-d5/scDPcjnB6CHopwK7R/loLJLNZWNUUdp+uIu6p5ncLXTw5bZ1V9txpQ0WtSM42hvUfG86+54TxLJE41JdBZA==
+  dependencies:
+    posthtml "^0.11.3"
+    posthtml-parser "^0.3.0"
+
 posthtml-include@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/posthtml-include/-/posthtml-include-1.2.0.tgz#baed939b0c763b3cbb44d331c33195a0ca988c2a"
@@ -2191,6 +2199,15 @@ posthtml-parser@^0.2.0:
     htmlparser2 "^3.8.3"
     isobject "^2.1.0"
 
+posthtml-parser@^0.3.0:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/posthtml-parser/-/posthtml-parser-0.3.3.tgz#3fe986fca9f00c0f109d731ba590b192f26e776d"
+  integrity sha512-H/Z/yXGwl49A7hYQLV1iQ3h87NE0aZ/PMZhFwhw3lKeCAN+Ti4idrHvVvh4/GX10I7u77aQw+QB4vV5/Lzvv5A==
+  dependencies:
+    htmlparser2 "^3.9.2"
+    isobject "^2.1.0"
+    object-assign "^4.1.1"
+
 posthtml-parser@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/posthtml-parser/-/posthtml-parser-0.4.1.tgz#95b78fef766fbbe0a6f861b6e95582bc3d1ff933"
@@ -2204,7 +2221,7 @@ posthtml-render@^1.0.5, posthtml-render@^1.1.5:
   resolved "https://registry.yarnpkg.com/posthtml-render/-/posthtml-render-1.1.5.tgz#387934e85438a3de77085fbc7d264efb00bd0e0f"
   integrity sha512-yvt54j0zCBHQVEFAuR+yHld8CZrCa/E1Z/OcFNCV1IEWTLVxT8O7nYnM4IIw1CD4r8kaRd3lc42+0lgCKgm87w==
 
-posthtml@^0.11.6:
+posthtml@^0.11.3, posthtml@^0.11.6:
   version "0.11.6"
   resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.11.6.tgz#e349d51af7929d0683b9d8c3abd8166beecc90a8"
   integrity sha512-C2hrAPzmRdpuL3iH0TDdQ6XCc9M7Dcc3zEW5BLerY65G4tWWszwv6nG/ksi6ul5i2mx22ubdljgktXCtNkydkw==

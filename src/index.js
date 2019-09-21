@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 var posthtml = require('express-posthtml');
-
+var testFile = require('./json/file.js');
 const repos = require('./api/repos');
 
 const app = express();
@@ -52,7 +52,17 @@ app.get('/commit', function (req, res) {
 });
 
 app.get('/file', function (req, res) {
-  res.render('pages/file.html');
+  res.render('pages/file.html', {
+    plugins: [
+      ...plugins,
+      require('posthtml-expressions')({
+        locals: {
+          title: 'ala',
+          file: JSON.parse(testFile),
+        }
+      }),
+    ]
+  });
 });
 
 app.listen(3000, () => {

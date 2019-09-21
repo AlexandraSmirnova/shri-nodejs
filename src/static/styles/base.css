@@ -1,4 +1,5 @@
 @import 'variables.css';
+@import 'font.css';
 @import 'container.css';
 @import 'row.css';
 @import 'text.css';
@@ -10,11 +11,10 @@
 @import 'repositoryHead.css';
 @import 'repositoryTable.css';
 
+@import 'fileEditor.css';
 
-body {
+
+.Body {
     margin: 0;
     padding: 0;
-
-    font-family: Arial;
-    color: var(--color-text-primary);
 }

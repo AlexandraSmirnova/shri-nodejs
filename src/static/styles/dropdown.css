@@ -1,0 +1,17 @@
+.Dropdown .Dropdown-Button {
+    color: var(--color-text-secondary); 
+}
+
+.Dropdown .Dropdown-Block {
+    position: absolute;
+    background: #fff;
+    width: 360px;
+    height: 320px;
+    box-shadow: 0px 4px 16px rgba(53, 73, 93, 0.2);
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.Dropdown .Dropdown-Block_state_hidden {
+    display: none;
+}

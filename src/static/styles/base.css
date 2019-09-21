@@ -1,14 +1,16 @@
 @import 'variables.css';
 @import 'font.css';
 @import 'container.css';
+@import 'dropdown.css';
 @import 'row.css';
 @import 'text.css';
+@import 'link.css';
 
 @import 'breadcrumbs.css';
 @import 'header.css';
 @import 'tabs.css';
 
-@import 'repositoryHead.css';
+@import 'fileDescription.css';
 @import 'repositoryTable.css';
 
 @import 'fileEditor.css';

@@ -16,6 +16,10 @@
     padding: 6px 0;
 }
 
+.FileEditor .FileEditor-Content_type_md {
+    padding: 25px 32px;
+}
+
 .FileRow {
     display: flex;
     flex-direction: row;
@@ -30,3 +34,4 @@
 .FileRow .FileRow-Content {
     margin-left: 32px;
 }
+

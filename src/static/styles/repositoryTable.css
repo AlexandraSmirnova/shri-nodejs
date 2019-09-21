@@ -1,12 +1,9 @@
-.RepositoryTable {
-}
-
-.RepositoryTable-Head {
+.RepositoryTable .RepositoryTable-Head {
     color: var(--color-text-gray);
 }
 
 @media (max-width: 360px) {
-    .RepositoryTable-Head {
+    .RepositoryTable .RepositoryTable-Head {
         display: none;
     }
 }

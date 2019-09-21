@@ -1,10 +1,14 @@
 <div class="Breadcrumbs">
     <each loop="item, index in pathArray">
         <if condition="index === pathArray.length - 1">
-            <div class="Breadcrumbs-Item Breadcrumbs-Item_state_open">{{item}}</div>
+            <div class="Breadcrumbs-Item Breadcrumbs-Item_state_open">
+                <div class="Text Text_size_s Tex_weight_l">{{item}}</div>
+            </div>
         </if>
         <else>
-            <div class="Breadcrumbs-Item">{{item}}</div>
+            <div class="Breadcrumbs-Item">
+                <div class="Text Text_size_s">{{item}}</div>    
+            </div>
         </else>
     </each>
 </div>

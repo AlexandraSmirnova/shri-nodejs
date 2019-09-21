@@ -1,9 +1,11 @@
 @import 'variables.css';
 @import 'container.css';
 @import 'row.css';
+@import 'text.css';
 
 @import 'breadcrumbs.css';
 @import 'header.css';
+@import 'tabs.css';
 
 @import 'repositoryHead.css';
 @import 'repositoryTable.css';
@@ -13,7 +15,6 @@ body {
     margin: 0;
     padding: 0;
 
-    font-size: 14px;
     font-family: Arial;
     color: var(--color-text-primary);
 }

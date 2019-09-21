@@ -1,0 +1,22 @@
+.Text {
+    display: inline-block;
+}
+
+.Text.Text_size_s {
+    font-size: var(--font-size-s);
+    line-height: var(--font-size-s);
+}
+
+.Text.Text_size_m {
+    font-size: var(--font-size-m);
+    line-height: var(--font-size-m);
+}
+
+.Text.Text_size_l {
+    font-size: var(--font-size-l);
+    line-height: var(--font-size-l);
+}
+
+.Text.Text_weight_l {
+    font-weight: var(--font-weight-l);
+}

@@ -7,16 +7,16 @@
 .Breadcrumbs .Breadcrumbs-Item {
     display: inline-block;
     color: var(--color-text-secondary);
+}
+
+.Breadcrumbs .Breadcrumbs-Item::after {
+    content: '/';
+    padding: 0 10px;
     font-size: 14px;
     line-height: 20px;
 }
 
-.Breadcrumbs .Breadcrumbs-Item:after {
-    content: '/';
-    padding: 0 10px;
-}
-
-.Breadcrumbs .Breadcrumbs-Item:last-child:after {
+.Breadcrumbs .Breadcrumbs-Item:last-child::after {
     content: '';
     padding: 0;
 }

@@ -1,15 +1,14 @@
 :root {
     /* Основные цвета */
-    --color-border: #F0F2F3;
-
-    --color-text-primary: #000;
-    --color-text-secondary: #7F8285;
-    --color-text-gray: #B8BEC3;
-    --color-link: #1774E9;
-    --color-accent: #FF4F49;
+    --color-border: #f0f2f3;
+    --color-text-primary: #000000;
+    --color-text-secondary: #7f8285;
+    --color-text-gray: #b8bec3;
+    --color-link: #1774e9;
+    --color-accent: #ff4f49;
 
     /* Дополнительные цвета */
-    --color-gray-1: #F5F5F5;
+    --color-gray-1: #f5f5f5;
     --color-gray-2: #999999;
 
 
@@ -18,11 +17,9 @@
     --font-size-s: 14px;
     --font-size-m: 16px;
     --font-size-l: 24px;
-
     --line-height-xs: 20px;
     --line-height-s: 20px;
     --line-height-m: 20px;
     --line-height-l: 28px;
-
     --font-weight-l: 600;
 }

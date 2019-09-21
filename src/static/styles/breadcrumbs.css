@@ -1,5 +1,5 @@
 .Breadcrumbs {
-    font-size: 0px;
+    font-size: 0;
     padding: 10px 0;
     border-bottom: 1px solid var(--color-border);
 }
@@ -10,17 +10,16 @@
 }
 
 .Breadcrumbs .Breadcrumbs-Item::after {
-    content: '/';
-    padding: 0 10px;
     font-size: 14px;
     line-height: 20px;
+    padding: 0 10px;
+    content: '/';
 }
 
 .Breadcrumbs .Breadcrumbs-Item:last-child::after {
-    content: '';
     padding: 0;
+    content: '';
 }
-
 
 .Breadcrumbs-Item.Breadcrumbs-Item_state_open {
     font-weight: bold;

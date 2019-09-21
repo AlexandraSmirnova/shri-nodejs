@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js",
-    "lint": "eslint src/**/*.js"
+    "lint": "yarn lint:js && lint:css",
+    "lint:js": "eslint src/**/*.js",
+    "lint:css": "csscomb src/static/styles"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -17,6 +19,7 @@
     "posthtml-include": "^1.2.0"
   },
   "devDependencies": {
+    "csscomb": "^4.3.0",
     "eslint": "^6.4.0",
     "nodemon": "^1.19.2"
   }

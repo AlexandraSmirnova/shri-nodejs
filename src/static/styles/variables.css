@@ -11,14 +11,17 @@
     --color-gray-1: #f5f5f5;
     --color-gray-2: #999999;
     --color-gray-3: #cccccc;
+    --color-light-blue: #EBF6FD;
 
 
     /* Переменные для текста */
-    --font-size-xs: 12px;
+    --font-size-xxs: 12px;
+    --font-size-xs: 13px;
     --font-size-s: 14px;
     --font-size-m: 16px;
     --font-size-l: 24px;
-    --line-height-xs: 20px;
+    --line-height-xxs: 20px;
+    --line-height-xs: 18px;
     --line-height-s: 20px;
     --line-height-m: 20px;
     --line-height-l: 28px;

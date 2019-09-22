@@ -2,6 +2,11 @@
     display: inline-block;
 }
 
+.Text.Text_size_xxs {
+    font-size: var(--font-size-xxs);
+    line-height: var(--line-height-xxs);
+}
+
 .Text.Text_size_xs {
     font-size: var(--font-size-xs);
     line-height: var(--line-height-xs);

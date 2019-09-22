@@ -19,6 +19,11 @@
     background-position: center;
 }
 
+.Icon.Icon_name_codefile {
+    background: url('../images/svg/codefile.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
 .Icon.Icon_name_download {
     background: url('../images/svg/download.svg') 100% 100% no-repeat;
     background-position: center;
@@ -36,5 +41,10 @@
 
 .Icon.Icon_name_logo {
     background: url('../images/svg/logo.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
+.Icon.Icon_name_graph {
+    background: url('../images/svg/graph.svg') 100% 100% no-repeat;
     background-position: center;
 }

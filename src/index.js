@@ -23,7 +23,6 @@ const plugins = [
     require('posthtml-bem')(),
     require('posthtml-expressions')({
         locals: {
-            title: 'ala',
             pathArray: ['dir', 'dirr', 'filedir', 'file'],
         }
     }),
@@ -51,13 +50,16 @@ app.get('/commit', function (req, res) {
     res.render('pages/commit.html');
 });
 
+app.get('/history', function (req, res) {
+    res.render('pages/history.html');
+});
+
 app.get('/file', function (req, res) {
     res.render('pages/file.html', {
         plugins: [
             ...plugins,
             require('posthtml-expressions')({
                 locals: {
-                    title: 'ala',
                     file: JSON.parse(testFile),
                 }
             }),

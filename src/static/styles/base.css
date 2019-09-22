@@ -18,6 +18,8 @@
 
 @import 'fileEditor.css';
 
+@import 'history.css';
+@import 'commit.css';
 
 .Body {
     margin: 0;

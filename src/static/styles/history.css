@@ -1,0 +1,45 @@
+.HistoryGraph {
+    margin-top: 16px;
+}
+
+.HistoryGraph .HistoryGraph-Title {
+    color: var(--color-text-secondary);
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.HistoryGraphRow {
+    display: flex;
+    flex-direction: row;
+    min-height: 62px;
+    padding-bottom: 14px;
+}
+
+.HistoryGraphRow .HistoryGraphRow-Node {
+    display: flex;
+    flex: inherit;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-light-blue);
+}
+
+.HistoryGraphRow .HistoryGraphRow-Node:after {
+    content: '';
+    position: absolute;
+    top: 46px;
+    left: 20px;
+    width: 2px;
+    height: 32px;
+    border-radius: 10px;
+    background-color: var(--color-text-gray);
+}
+
+
+/* скрываем последнюю линию в графе. Более изящного способа добраться до нужного элемента, чтобы скрыть не нашла */
+.HistoryGraph-Content .HistoryGraphRow:last-of-type .HistoryGraphRow-Node:after {
+    display: none;
+}

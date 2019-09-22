@@ -1,4 +1,6 @@
 .Dropdown .Dropdown-Button {
+    /* font-size 0, чтобы не было лишних отступов между внутренними inline-элементами*/
+    font-size: 0;
     color: var(--color-text-secondary); 
 }
 

@@ -5,6 +5,9 @@
 @import 'row.css';
 @import 'text.css';
 @import 'link.css';
+@import 'icon.css';
+@import 'iconPlus.css';
+@import 'button.css';
 
 @import 'breadcrumbs.css';
 @import 'header.css';

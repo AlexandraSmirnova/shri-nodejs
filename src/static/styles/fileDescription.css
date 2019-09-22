@@ -1,7 +1,6 @@
 .FileDescription .FileDescription-Title {
     display: flex;
     flex-direction: row;
-    font-size: 24px;
     margin-top: 10px;
 }
 

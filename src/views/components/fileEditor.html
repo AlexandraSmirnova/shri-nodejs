@@ -1,8 +1,14 @@
 <div class="FileEditor">
     <div class="FileEditor-Head">
-        <div class="Text Text_size_s">Head</div>
+        <div class="IconPlus IconPlus_vertical-align_center">
+            <div class="Icon Icon_name_code IconPlus-Icon IconPlus-Icon_indent-r_m Text Text_size_s"></div>
+            <div class="Text Text_size_s">filename.ext</div>
+        </div>
+        <button class="Button">
+            <div class="Icon Icon_name_download"></div>
+        </button>
     </div>
-        <div class="FileEditor-Content Font Font_type_mono">
+    <div class="FileEditor-Content Font Font_type_mono">
         <each loop="line, index in file">
             <div class="FileRow">
                 <div class="FileRow-Number">

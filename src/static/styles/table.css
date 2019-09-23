@@ -1,9 +1,9 @@
-.RepositoryTable .RepositoryTable-Head {
+.Table .Table-Head {
     color: var(--color-text-gray);
 }
 
 @media (max-width: 720px) {
-    .RepositoryTable .RepositoryTable-Head {
+    .Table .Table-Head {
         display: none;
     }
 }

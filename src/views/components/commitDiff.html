@@ -1,0 +1,31 @@
+<!-- сюда не прокинулись естовый данные, пока не разобралась почему. -->
+<!-- Определение подстведки зеленым или красным будет в зависимости от номеров. -->
+<!-- Если старый номер -1 - значит строкe добавили - зеленым -->
+<!-- Если новый номер -1 - значит строку удалили - красным -->
+<div class="FileEditor">
+    <div class="FileEditor-Head">
+        <div class="IconPlus IconPlus_vertical-align_center">
+            <div class="Icon Icon_name_codefile IconPlus-Icon IconPlus-Icon_indent-r_m Text Text_size_s"></div>
+            <div class="Text Text_size_s">filename.ext</div>
+        </div>
+        <button class="Button">
+            <div class="Icon Icon_name_download"></div>
+        </button>
+    </div>
+
+    <div class="FileEditor-Content Font Font_type_mono">
+        <each loop="lineObject, index in commit">
+            <div class="FileRow">
+                <div class="FileRow-Number">
+                    <div class="Text Text_size_xxs">{{lineObject.number_old}}</div>
+                </div>
+                <div class="FileRow-Number">
+                    <div class="Text Text_size_xxs">{{lineObject.number_new}}</div>
+                </div>
+                <div class="FileRow-Content">
+                    <div class="Text Text_size_xxs">{{lineObject.line}}</div>
+                </div>
+            </div>
+        </each>
+    </div>
+</div>

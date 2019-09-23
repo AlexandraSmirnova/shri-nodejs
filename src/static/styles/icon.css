@@ -27,6 +27,12 @@
     transform: rotate(90deg);
 }
 
+
+.Icon.Icon_name_branch {
+    background: url('../images/svg/branch.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
 .Icon.Icon_name_code {
     background: url('../images/svg/code.svg') 100% 100% no-repeat;
     background-position: center;

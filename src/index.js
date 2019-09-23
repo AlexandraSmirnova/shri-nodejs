@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 var posthtml = require('express-posthtml');
 var testFile = require('./json/file.js');
+var testCommit = require('./json/commit.js');
 const repos = require('./api/repos');
 
 const app = express();
@@ -47,7 +48,16 @@ app.get('/branches', function (req, res) {
 });
 
 app.get('/commit', function (req, res) {
+    console.log('ff', testCommit);
     res.render('pages/commit.html');
+    plugins: [
+        ...plugins,
+        require('posthtml-expressions')({
+            locals: {
+                commit: JSON.parse(testCommit),
+            }
+        }),
+    ]
 });
 
 app.get('/history', function (req, res) {

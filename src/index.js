@@ -48,16 +48,16 @@ app.get('/branches', function (req, res) {
 });
 
 app.get('/commit', function (req, res) {
-    console.log('ff', testCommit);
-    res.render('pages/commit.html');
-    plugins: [
-        ...plugins,
-        require('posthtml-expressions')({
-            locals: {
-                commit: JSON.parse(testCommit),
-            }
-        }),
-    ]
+    res.render('pages/commit.html', {
+        plugins: [
+            ...plugins,
+            require('posthtml-expressions')({
+                locals: {
+                    commit: JSON.parse(testCommit),
+                }
+            }),
+        ]
+    });
 });
 
 app.get('/history', function (req, res) {

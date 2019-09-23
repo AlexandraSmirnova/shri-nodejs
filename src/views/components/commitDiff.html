@@ -1,7 +1,3 @@
-<!-- сюда не прокинулись естовый данные, пока не разобралась почему. -->
-<!-- Определение подстведки зеленым или красным будет в зависимости от номеров. -->
-<!-- Если старый номер -1 - значит строкe добавили - зеленым -->
-<!-- Если новый номер -1 - значит строку удалили - красным -->
 <div class="FileEditor">
     <div class="FileEditor-Head">
         <div class="IconPlus IconPlus_vertical-align_center">
@@ -15,6 +11,46 @@
 
     <div class="FileEditor-Content Font Font_type_mono">
         <each loop="lineObject, index in commit">
+            <if condition="lineObject.number_old === -1">
+                <div class="FileRow FileRow_color_green">
+                    <div class="FileRow-Number">
+                        <div class="Text Text_size_xxs"></div>
+                    </div>
+                    <div class="FileRow-Number">
+                        <div class="Text Text_size_xxs">{{lineObject.number_new}}</div>
+                    </div>
+                    <div class="FileRow-Content">
+                        <div class="Text Text_size_xxs">{{lineObject.line}}</div>
+                    </div>
+                </div>
+            </if>
+            <elseif condition="lineObject.number_new === -1">
+                <div class="FileRow FileRow_color_red">
+                    <div class="FileRow-Number">
+                        <div class="Text Text_size_xxs">{{lineObject.number_old}}</div>
+                    </div>
+                    <div class="FileRow-Number">
+                        <div class="Text Text_size_xxs"></div>
+                    </div>
+                    <div class="FileRow-Content">
+                        <div class="Text Text_size_xxs">{{lineObject.line}}</div>
+                    </div>
+                </div>
+            </elseif>
+            <else>
+                <div class="FileRow">
+                    <div class="FileRow-Number">
+                        <div class="Text Text_size_xxs">{{lineObject.number_old}}</div>
+                    </div>
+                    <div class="FileRow-Number">
+                        <div class="Text Text_size_xxs">{{lineObject.number_new}}</div>
+                    </div>
+                    <div class="FileRow-Content">
+                        <div class="Text Text_size_xxs">{{lineObject.line}}</div>
+                    </div>
+                </div>
+            </else>
+
             <div class="FileRow">
                 <div class="FileRow-Number">
                     <div class="Text Text_size_xxs">{{lineObject.number_old}}</div>

@@ -36,3 +36,11 @@
     margin-left: 32px;
 }
 
+.FileRow.FileRow_color_green {
+    background-color: var(--color-green);
+}
+
+.FileRow.FileRow_color_red {
+    background-color: var(--color-red);
+}
+

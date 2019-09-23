@@ -14,6 +14,19 @@
     transform: rotate(180deg);
 }
 
+.Icon.Icon_name_arrow-right {
+    background: url('../images/svg/arrow.svg') 100% 100% no-repeat;
+    background-position: center;
+    transform: rotate(-90deg);
+}
+
+
+.Icon.Icon_name_arrow-left {
+    background: url('../images/svg/arrow.svg') 100% 100% no-repeat;
+    background-position: center;
+    transform: rotate(90deg);
+}
+
 .Icon.Icon_name_code {
     background: url('../images/svg/code.svg') 100% 100% no-repeat;
     background-position: center;

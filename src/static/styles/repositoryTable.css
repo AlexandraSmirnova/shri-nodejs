@@ -2,7 +2,7 @@
     color: var(--color-text-gray);
 }
 
-@media (max-width: 360px) {
+@media (max-width: 720px) {
     .RepositoryTable .RepositoryTable-Head {
         display: none;
     }

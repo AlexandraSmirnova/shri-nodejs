@@ -8,13 +8,7 @@
     margin-bottom: 16px;
 }
 
-.HistoryGraphRow {
-    display: flex;
-    min-height: 62px;
-    padding-bottom: 14px;
-}
-
-.HistoryGraphRow .HistoryGraphRow-Node {
+.NodeIcon {
     display: flex;
     flex: inherit;
     justify-content: center;
@@ -26,13 +20,21 @@
     background-color: var(--color-light-blue);
 }
 
-.HistoryGraphRow:not(:last-child) .HistoryGraphRow-Node:after {
+.HistoryGraph-Row {
+    display: flex;
+    min-height: 62px;
+    padding-bottom: 14px;
+    position: relative;
+}
+
+
+.HistoryGraph-Row:not(:last-child):after {
     content: '';
     position: absolute;
-    top: 46px;
+    top: 58px;
     left: 20px;
+    bottom: -12px;
     width: 2px;
-    height: 32px;
     border-radius: 10px;
     background-color: var(--color-text-gray);
 }

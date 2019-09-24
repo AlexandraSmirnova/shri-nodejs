@@ -8,9 +8,9 @@
     --color-accent: #ff4f49;
 
     /* Дополнительные цвета */
-    --color-gray-1: #f5f5f5;
-    --color-gray-2: #999999;
-    --color-gray-3: #cccccc;
+    --color-gray-dark: #999999;
+    --color-gray: #cccccc;
+    --color-gray-light: #f5f5f5;
     --color-light-blue: #EBF6FD;
     --color-green: #E6FFED;
     --color-red: #FFEEF0;

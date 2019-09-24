@@ -32,6 +32,7 @@
 }
 
 .FileRow .FileRow-Content {
+    white-space: pre;
     margin-left: 32px;
 }
 

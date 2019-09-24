@@ -1,9 +1,9 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-var posthtml = require('express-posthtml');
-var testFile = require('./json/file.js');
-var testCommit = require('./json/commit.js');
+const posthtml = require('express-posthtml');
+const testFile = require('./json/file.js');
+const testCommit = require('./json/commit.js');
 const repos = require('./api/repos');
 
 const app = express();

@@ -1,6 +1,5 @@
 .Tabs {
     display: flex;
-    flex-direction: row;
 }
 
 .Tabs .Tabs-Item {

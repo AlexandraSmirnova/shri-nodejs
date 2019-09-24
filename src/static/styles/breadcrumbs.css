@@ -10,16 +10,11 @@
     cursor: pointer;
 }
 
-.Breadcrumbs .Breadcrumbs-Item::after {
+.Breadcrumbs .Breadcrumbs-Item:not(:last-child):after {
     font-size: 14px;
     line-height: 20px;
     padding: 0 10px;
     content: '/';
-}
-
-.Breadcrumbs .Breadcrumbs-Item:last-child::after {
-    padding: 0;
-    content: '';
 }
 
 .Breadcrumbs-Item.Breadcrumbs-Item_state_open {

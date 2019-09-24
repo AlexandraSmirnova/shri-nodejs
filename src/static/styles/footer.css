@@ -2,16 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 55px;
+    min-height: 55px;
     border-top: 1px solid var(--color-border);
     padding: 0 32px;
     color: var(--color-text-secondary);
 }
 
-.ContentInfo .ContentInfo-Item {
-    margin-right: 32px;
-}
-
-.ContentInfo .ContentInfo-Item:last-child {
-    margin-right: 0;
+.ContentInfo-Item + .ContentInfo-Item {
+    margin-left: 32px;
 }

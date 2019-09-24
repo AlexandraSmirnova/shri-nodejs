@@ -23,7 +23,6 @@
 
 .FileRow {
     display: flex;
-    flex-direction: row;
 }
 
 .FileRow .FileRow-Number {

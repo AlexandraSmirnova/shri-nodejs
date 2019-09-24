@@ -10,7 +10,6 @@
 
 .HistoryGraphRow {
     display: flex;
-    flex-direction: row;
     min-height: 62px;
     padding-bottom: 14px;
 }
@@ -27,7 +26,7 @@
     background-color: var(--color-light-blue);
 }
 
-.HistoryGraphRow .HistoryGraphRow-Node:after {
+.HistoryGraphRow:not(:last-child) .HistoryGraphRow-Node:after {
     content: '';
     position: absolute;
     top: 46px;
@@ -36,10 +35,4 @@
     height: 32px;
     border-radius: 10px;
     background-color: var(--color-text-gray);
-}
-
-
-/* скрываем последнюю линию в графе. Более изящного способа добраться до нужного элемента, чтобы скрыть не нашла */
-.HistoryGraph-Content .HistoryGraphRow:last-of-type .HistoryGraphRow-Node:after {
-    display: none;
 }

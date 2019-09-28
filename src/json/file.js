@@ -1,4 +1,4 @@
-const express = require('express');
+const file = `const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const posthtml = require('express-posthtml');
@@ -79,5 +79,6 @@ app.get('/file', function (req, res) {
 
 app.listen(3000, () => {
     console.log('Example app listening on port 3000!');
-});
-
+});`
+console.log(JSON.stringify(file.split('\n')))
+module.exports = JSON.stringify(file.split('\n'));

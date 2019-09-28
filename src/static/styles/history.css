@@ -1,0 +1,40 @@
+.HistoryGraph {
+    margin-top: 16px;
+}
+
+.HistoryGraph .HistoryGraph-Title {
+    color: var(--color-text-secondary);
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.NodeIcon {
+    display: flex;
+    flex: inherit;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-light-blue);
+}
+
+.HistoryGraph-Row {
+    display: flex;
+    min-height: 62px;
+    padding-bottom: 14px;
+    position: relative;
+}
+
+
+.HistoryGraph-Row:not(:last-child):after {
+    content: '';
+    position: absolute;
+    top: 58px;
+    left: 20px;
+    bottom: -12px;
+    width: 2px;
+    border-radius: 10px;
+    background-color: var(--color-text-gray);
+}

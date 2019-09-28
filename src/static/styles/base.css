@@ -1,0 +1,28 @@
+@import 'variables.css';
+@import 'font.css';
+@import 'container.css';
+@import 'dropdown.css';
+@import 'row.css';
+@import 'text.css';
+@import 'link.css';
+@import 'icon.css';
+@import 'iconPlus.css';
+@import 'button.css';
+
+@import 'breadcrumbs.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'tabs.css';
+
+@import 'fileDescription.css';
+@import 'table.css';
+
+@import 'fileEditor.css';
+
+@import 'history.css';
+@import 'commit.css';
+
+.Body {
+    margin: 0;
+    padding: 0;
+}

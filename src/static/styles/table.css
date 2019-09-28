@@ -1,0 +1,9 @@
+.Table .Table-Head {
+    color: var(--color-text-gray);
+}
+
+@media (max-width: 720px) {
+    .Table .Table-Head {
+        display: none;
+    }
+}

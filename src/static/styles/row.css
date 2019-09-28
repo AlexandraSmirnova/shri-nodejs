@@ -1,0 +1,70 @@
+.Row {
+    display: flex;
+    padding: 14px 0;
+}
+
+.Row.Row_border_top {
+    border-top: 1px solid var(--color-border);
+}
+
+.Row .Row-Item {
+    flex: 1;
+}
+
+.Row .Row-Item.Row-Item_align_right {
+    text-align: right;
+}
+
+.Row .Row-ButtonMobule {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .Row {
+        flex-wrap: wrap;
+    }
+
+    .Row .Row-Item.Row-Item_align_right {
+        text-align: left;
+    }
+
+    .Row.Row_order_change .Row-Item:nth-child(1) {
+        flex: 1 0 100%;
+        order: 1;
+    }
+
+    .Row.Row_order_change .Row-Item:nth-child(3) {
+        display: flex;
+        justify-content: space-between;
+        flex: 1 0 100%;
+        order: 2;
+    }
+
+    .Row.Row_order_change .Row-Item:nth-child(2) {
+        flex: 0;
+        margin-right: 8px;
+        order: 3;
+    }
+
+    .Row.Row_order_change .Row-Item:nth-child(4) {
+        flex: 0;
+        margin-right: 8px;
+        order: 4;
+    }
+
+    .Row.Row_order_change .Row-Item:nth-child(5) {
+        order: 5;
+    }
+
+    .Row .Row-ButtonMobule {
+        display: inline-block;
+    }
+}
+
+.Row .Row-Item.Row-Item_fraction_col-2 {
+    flex: 2;
+}
+
+.Row .Row-Item.Row-Item_fraction_col-6 {
+    flex: 6;
+}

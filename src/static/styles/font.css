@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&display=swap');
+
+.Font {
+    font-family: Arial;
+    color: var(--color-text-primary);
+}
+
+.Font_type_mono {
+    font-family: 'PT Mono', monospace;
+}

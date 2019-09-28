@@ -1,0 +1,38 @@
+.Tabs {
+    display: flex;
+}
+
+.Tabs .Tabs-Item {
+    color: var(--color-text-secondary);
+    margin-right: 32px;
+    padding: 8px 0;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.Tabs .Tabs-Item:hover {
+    color: var(--color-text-primary);
+}
+
+.Tabs .Tabs-Item:last-child {
+    margin-right: 0;
+}
+
+.Tabs .Tabs-Item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: transparent;
+}
+
+.Tabs .Tabs-Item.Tabs-Item_state_active {
+    color: var(--color-text-primary);
+}
+
+.Tabs .Tabs-Item.Tabs-Item_state_active::before {
+    background: var(--color-accent);
+}

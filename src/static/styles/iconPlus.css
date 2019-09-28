@@ -1,0 +1,24 @@
+.IconPlus .IconPlus-Icon {
+    display: inline-block;
+}
+
+.IconPlus .IconPlus-Icon.IconPlus-Icon_indent-r_s {
+    margin-right: 8px;
+}
+
+.IconPlus .IconPlus-Icon.IconPlus-Icon_indent-r_m {
+    margin-right: 12px;
+}
+
+.IconPlus .IconPlus-Icon.IconPlus-Icon_indent-l_s {
+    margin-left: 8px;
+}
+
+.IconPlus .IconPlus-Icon.IconPlus-Icon_indent-l_m {
+    margin-left: 12px;
+}
+
+.IconPlus.IconPlus_vertical-align_center {
+    display: flex;
+    align-items: center;
+}

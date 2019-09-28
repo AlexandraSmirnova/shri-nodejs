@@ -1,0 +1,12 @@
+.FileDescription .FileDescription-Title {
+    display: flex;
+    margin-top: 10px;
+}
+
+.FileDescription .FileDescription-TitleElem {
+    margin-right: 4px;
+}
+
+.FileDescription .FileDescription-Info {
+    padding: 11px 0;
+}

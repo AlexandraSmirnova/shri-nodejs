@@ -1,0 +1,69 @@
+.Icon {
+    width: 1em;
+    height: 1em;
+}
+
+.Icon.Icon_name_arrow-down {
+    background: url('../images/svg/arrow.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
+.Icon.Icon_name_arrow-up {
+    background: url('../images/svg/arrow.svg') 100% 100% no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+}
+
+.Icon.Icon_name_arrow-right {
+    background: url('../images/svg/arrow.svg') 100% 100% no-repeat;
+    background-position: center;
+    transform: rotate(-90deg);
+}
+
+
+.Icon.Icon_name_arrow-left {
+    background: url('../images/svg/arrow.svg') 100% 100% no-repeat;
+    background-position: center;
+    transform: rotate(90deg);
+}
+
+
+.Icon.Icon_name_branch {
+    background: url('../images/svg/branch.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
+.Icon.Icon_name_code {
+    background: url('../images/svg/code.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
+.Icon.Icon_name_codefile {
+    background: url('../images/svg/codefile.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
+.Icon.Icon_name_download {
+    background: url('../images/svg/download.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
+.Icon.Icon_name_file {
+    background: url('../images/svg/file.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
+.Icon.Icon_name_folder {
+    background: url('../images/svg/folder.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
+.Icon.Icon_name_logo {
+    background: url('../images/svg/logo.svg') 100% 100% no-repeat;
+    background-position: center;
+}
+
+.Icon.Icon_name_graph {
+    background: url('../images/svg/graph.svg') 100% 100% no-repeat;
+    background-position: center;
+}

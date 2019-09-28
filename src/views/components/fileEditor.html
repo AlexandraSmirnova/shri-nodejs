@@ -1,0 +1,21 @@
+<div class="FileEditor">
+    <div class="FileEditor-Head">
+        <div class="IconPlus IconPlus_vertical-align_center">
+            <div class="Icon Icon_name_codefile IconPlus-Icon IconPlus-Icon_indent-r_m Text Text_size_s"></div>
+            <div class="Text Text_size_s">filename.ext</div>
+        </div>
+        <button class="Button">
+            <div class="Icon Icon_name_download"></div>
+        </button>
+    </div>
+    <div class="FileEditor-Content Font Font_type_mono">
+        <each loop="line, index in file">
+            <div class="FileRow">
+                <div class="FileRow-Number">
+                    <div class="Text Text_size_xxs">{{index}}</div>
+                </div>
+                <div class="FileRow-Content Text Text_size_xxs">{{line}}</div>
+            </div>
+        </each>
+    </div>
+</div>

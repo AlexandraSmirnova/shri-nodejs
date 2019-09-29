@@ -19,9 +19,7 @@
                     <div class="FileRow-Number">
                         <div class="Text Text_size_xxs">{{lineObject.number_new}}</div>
                     </div>
-                    <div class="FileRow-Content">
-                        <div class="Text Text_size_xxs">{{lineObject.line}}</div>
-                    </div>
+                    <div class="FileRow-Content Text Text_size_xxs">{{lineObject.line}}</div>
                 </div>
             </if>
             <elseif condition="lineObject.number_new === -1">
@@ -32,9 +30,7 @@
                     <div class="FileRow-Number">
                         <div class="Text Text_size_xxs"></div>
                     </div>
-                    <div class="FileRow-Content">
-                        <div class="Text Text_size_xxs">{{lineObject.line}}</div>
-                    </div>
+                    <div class="FileRow-Content Text Text_size_xxs">{{lineObject.line}}</div>
                 </div>
             </elseif>
             <else>
@@ -45,23 +41,9 @@
                     <div class="FileRow-Number">
                         <div class="Text Text_size_xxs">{{lineObject.number_new}}</div>
                     </div>
-                    <div class="FileRow-Content">
-                        <div class="Text Text_size_xxs">{{lineObject.line}}</div>
-                    </div>
+                    <div class="FileRow-Content Text Text_size_xxs">{{lineObject.line}}</div>
                 </div>
             </else>
-
-            <div class="FileRow">
-                <div class="FileRow-Number">
-                    <div class="Text Text_size_xxs">{{lineObject.number_old}}</div>
-                </div>
-                <div class="FileRow-Number">
-                    <div class="Text Text_size_xxs">{{lineObject.number_new}}</div>
-                </div>
-                <div class="FileRow-Content">
-                    <div class="Text Text_size_xxs">{{lineObject.line}}</div>
-                </div>
-            </div>
         </each>
     </div>
 </div>

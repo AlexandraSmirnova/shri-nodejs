@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "node ./src/index.js",
-    "dev": "nodemon ./src/index.js",
+    "clean": "rimraf build",
+    "start": "yarn build_client && node ./src/server/index.js",
+    "dev": "yarn build_client && nodemon ./src/server/index.js",
     "lint": "yarn lint:js && lint:css",
     "lint:js": "eslint src/**/*.js",
-    "lint:css": "csscomb src/static/styles"
+    "lint:css": "csscomb src/static/styles",
+    "build_client": "yarn clean && rollup -c"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -16,11 +18,15 @@
     "posthtml-bem": "^0.2.2",
     "posthtml-expressions": "^1.1.1",
     "posthtml-extend": "^0.3.0",
-    "posthtml-include": "^1.2.0"
+    "posthtml-include": "^1.2.0",
+    "shri-mini-redux": "https://github.com/AlexandraSmirnova/shri-mini-redux.git"
   },
   "devDependencies": {
     "csscomb": "^4.3.0",
     "eslint": "^6.4.0",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "rollup": "^1.22.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }

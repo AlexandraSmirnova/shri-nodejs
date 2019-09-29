@@ -17,7 +17,7 @@ if (process.argv.length <= 2 || !fs.existsSync(process.argv[2])) {
 process.env.DIR = process.argv[2];
 console.log("Seted process.env.DIR: " + process.env.DIR);
 
-const TEMPLATE_DIR = path.join(__dirname, '/views');
+const TEMPLATE_DIR = path.join(__dirname, '/../views');
 const plugins = [
     require('posthtml-extend')({ root: TEMPLATE_DIR }),
     require('posthtml-include')({ root: TEMPLATE_DIR }),
@@ -33,7 +33,7 @@ const options = {}
 app.set('views', TEMPLATE_DIR);
 app.set('view options', { plugins: plugins, options: options })
 
-app.use('/static', express.static(__dirname + '/static'));
+app.use('/static', express.static(__dirname + '/../static'));
 app.use('/api/repos', repos);
 
 app.engine('html', posthtml)
@@ -41,6 +41,10 @@ app.engine('html', posthtml)
 
 app.get('/', function (req, res) {
     res.render('pages/index.html');
+});
+
+app.get('/files', function (req, res) {
+    res.render('pages/filesList.html');
 });
 
 app.get('/branches', function (req, res) {
@@ -75,6 +79,10 @@ app.get('/file', function (req, res) {
             }),
         ]
     });
+});
+
+app.get('/js/:fileName',function(req,res){
+    res.sendFile(path.join(__dirname, '/../../build/', req.params.fileName)); 
 });
 
 app.listen(3000, () => {

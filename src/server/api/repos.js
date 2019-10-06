@@ -4,6 +4,7 @@ const path = require('path');
 const gitUtils = require('../../utils/gitUtils');
 const { isDirectory, getRepositoryPath, deleteFolderRecursive } = require('../../utils/fsUtils');
 
+
 const router = express.Router();
 
 router.use(express.json());
@@ -16,13 +17,13 @@ router.get('/', (req, res) => {
 
         const repos = items.filter((item) => {
             const dirPath = path.join(process.env.DIR, item);
-            
-            return isDirectory(dirPath) && fs.existsSync(path.join(dirPath, '.git')) 
+
+            return isDirectory(dirPath) && fs.existsSync(path.join(dirPath, '.git'))
                 && isDirectory(path.join(dirPath, '.git'));
         });
 
         res.json(repos);
-    });    
+    });
 });
 
 router.get('/:repositoryId/commits/:commitHash?', (req, res) => {
@@ -32,7 +33,7 @@ router.get('/:repositoryId/commits/:commitHash?', (req, res) => {
             .filter((i) => i !== "")
             .map((commit) => {
                 const commitData = commit.split(',');
-                
+
                 if (commitData.length < 4) {
                     return;
                 }
@@ -52,7 +53,10 @@ router.get('/:repositoryId/commits/:commitHash?', (req, res) => {
 });
 
 router.get('/:repositoryId/commits/:commitHash/diff', (req, res) => {
-    const onError = (err) => res.status(404).end();
+    const onError = (err) => {
+        console.log('err', err);
+        res.status(404).end();
+    }
     const onSuccess = (out) => {
         res.json({ diff: out });
     }
@@ -61,9 +65,23 @@ router.get('/:repositoryId/commits/:commitHash/diff', (req, res) => {
 });
 
 router.get(['/:repositoryId/', '/:repositoryId/tree/:commitHash/:path([^/]*)?'], (req, res) => {
-    const onError = (err) => res.status(404).end();
+    const onError = (err) => {
+        console.log('err', err);
+        res.status(404).end();
+    }
     const onSuccess = (out) => {
-        res.json(out.split('\n').filter((i) => i));
+        const result = out.split('\n')
+            .filter((item) => item)
+            .map((item) => {
+                const itemPath = path.join(process.env.DIR, req.params.repositoryId, item);
+
+                return {
+                    name: item.substr(item.lastIndexOf('/') + 1),
+                    isDirectory: isDirectory(itemPath),
+                };
+            });
+
+        res.json(result);
     }
 
     gitUtils.showTree(req.params.repositoryId, req.params.commitHash, req.params.path, onError, onSuccess);

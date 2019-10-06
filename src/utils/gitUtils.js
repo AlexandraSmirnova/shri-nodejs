@@ -25,7 +25,9 @@ const diff = (repositoryId, args, onError, onSuccess) => {
 
 const showTree = (repositoryId, commitHash, path, onError, onSuccess) => {
     const repositoryPath = getRepositoryPath(repositoryId);
-    const pathParams = commitHash ? `${commitHash} ${path || ""}` : "master";
+    const pathParams = commitHash 
+        ? `${commitHash} ${path.replace(/\/?$/, '/') || ""}` 
+        : "master";
 
     execWrapper(`git ls-tree --full-tree --name-only ${pathParams}`, repositoryPath, onError, onSuccess);
 };

@@ -1,8 +1,11 @@
 <extends src="base.html">
     <block name="content">
-        <include src="components/breadcrumbs.html"></include>
-        <include src="components/fileDescription.html"></include>
-        <include src="components/tabs.html"></include>
-        <include src="components/table.html"></include>
+        <ul>
+            <li><a href="/files">Список файлов</a></li>
+            <li><a href="/branches">Список веток</a></li>
+            <li><a href="/history">История коммитов</a></li>
+            <li><a href="/commit">Страница коммита</a></li>
+            <li><a href="/file">Странница файла</a></li>
+        </ul>
     </block>
 </extends>

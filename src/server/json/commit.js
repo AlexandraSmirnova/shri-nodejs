@@ -52,7 +52,7 @@ const commit = [
     {
         number_old: 8,
         number_new: 9,
-        line: '	* @author Dmitry Andreev <a href="mailto:AndreevDm@yandex-team.ru"></a>'
+        line: '* @author Dmitry Andreev <a href="mailto:AndreevDm@yandex-team.ru"></a>'
     },
     {
         number_old: 9,
@@ -67,7 +67,7 @@ const commit = [
     {
         number_old: 11,
         number_new: 12,
-        line: '	public ArcCli(String arcBinaryPath) {'
+        line: 'public ArcCli(String arcBinaryPath) {'
     },
     {
         number_old: -1,

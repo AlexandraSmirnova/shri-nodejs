@@ -1,8 +1,8 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const gitUtils = require('../utils/gitUtils');
-const { isDirectory, getRepositoryPath, deleteFolderRecursive } = require('../utils/fsUtils');
+const gitUtils = require('../../utils/gitUtils');
+const { isDirectory, getRepositoryPath, deleteFolderRecursive } = require('../../utils/fsUtils');
 
 const router = express.Router();
 

@@ -53,10 +53,7 @@ router.get('/:repositoryId/commits/:commitHash?', (req, res) => {
 });
 
 router.get('/:repositoryId/commits/:commitHash/diff', (req, res) => {
-    const onError = (err) => {
-        console.log('err', err);
-        res.status(404).end();
-    }
+    const onError = (err) => res.status(404).end();
     const onSuccess = (out) => {
         res.json({ diff: out });
     }
@@ -65,10 +62,7 @@ router.get('/:repositoryId/commits/:commitHash/diff', (req, res) => {
 });
 
 router.get(['/:repositoryId/', '/:repositoryId/tree/:commitHash/:path([^/]*)?'], (req, res) => {
-    const onError = (err) => {
-        console.log('err', err);
-        res.status(404).end();
-    }
+    const onError = (err) => res.status(404).end();
     const onSuccess = (out) => {
         const result = out.split('\n')
             .filter((item) => item)
@@ -79,7 +73,11 @@ router.get(['/:repositoryId/', '/:repositoryId/tree/:commitHash/:path([^/]*)?'],
                     name: item.substr(item.lastIndexOf('/') + 1),
                     isDirectory: isDirectory(itemPath),
                 };
-            });
+            })
+            .sort((a, b) => a.isDirectory === b.isDirectory
+                ? a.name.localeCompare(b.name)
+                : b.isDirectory - a.isDirectory
+            );
 
         res.json(result);
     }

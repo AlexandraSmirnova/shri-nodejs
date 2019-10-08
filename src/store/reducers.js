@@ -6,7 +6,6 @@ const initialSearchStore = {
 }
 
 const search = (state = initialSearchStore, action) => {
-    console.log('reducer', action);
     switch (action.type) {
         case SET_SEARCH_PATH:
             return {

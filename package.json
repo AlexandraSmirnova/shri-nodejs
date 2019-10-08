@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "scripts": {
     "clean": "rimraf build",
-    "start": "yarn build_client && node ./src/server/index.js",
+    "start": "node ./src/server/index.js",
     "dev": "yarn build_client && nodemon ./src/server/index.js",
     "lint": "yarn lint:js && lint:css",
     "lint:js": "eslint src/**/*.js",

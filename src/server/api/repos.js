@@ -88,8 +88,8 @@ router.get(['/:repositoryId/', '/:repositoryId/tree/:commitHash/:path([^/]*)?'],
 router.get('/:repositoryId/blob/:commitHash?/:pathToFile([^/]*)', (req, res) => {
     const onError = (err) => res.status(404).end();
     const onSuccess = (out) => {
-        res.set('Content-type: application/octet-stream');
-        res.send(out);
+        // res.set('Content-type: application/octet-stream');
+        res.json(JSON.stringify(out.split('\n')));
     }
 
     gitUtils.showFileContent(req.params.repositoryId, req.params.commitHash, req.params.pathToFile, onError, onSuccess);

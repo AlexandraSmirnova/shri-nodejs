@@ -25,7 +25,7 @@ const diff = (repositoryId, args, onError, onSuccess) => {
 
 const showTree = (repositoryId, commitHash, path, onError, onSuccess) => {
     const repositoryPath = getRepositoryPath(repositoryId);
-    const pathParams = commitHash 
+    const pathParams = commitHash && path
         ? `${commitHash} ${path.replace(/\/?$/, '/') || ""}` 
         : "master";
 

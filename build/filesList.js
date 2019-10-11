@@ -33,7 +33,6 @@ class Store {
     }
 
     dispatch(action) {
-        console.log('action', action);
         this._state = this._reducer(this._state, action);
         this._notifyListeners();
     }
@@ -133,7 +132,6 @@ const initialSearchStore = {
 };
 
 const search = (state = initialSearchStore, action) => {
-    console.log('reducer', action);
     switch (action.type) {
         case SET_SEARCH_PATH:
             return {

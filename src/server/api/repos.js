@@ -107,7 +107,9 @@ router.delete('/:repositoryId', (req, res) => {
 });
 
 router.post('/:repositoryId?', (req, res) => {
-    const onError = (err) => res.status(404).end();
+    const onError = (err) => {
+        res.status(404).end()
+    };
     const onSuccess = (out) => {
         res.send(`Repository ${req.body.url} successfully added`);
     }
@@ -116,3 +118,4 @@ router.post('/:repositoryId?', (req, res) => {
 });
 
 module.exports = router;
+

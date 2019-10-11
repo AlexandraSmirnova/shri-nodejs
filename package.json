@@ -9,11 +9,13 @@
     "lint": "yarn lint:js && lint:css",
     "lint:js": "eslint src/**/*.js",
     "lint:css": "csscomb src/static/styles",
-    "build_client": "yarn clean && rollup -c"
+    "build_client": "yarn clean && rollup -c",
+    "test": "jest"
   },
   "dependencies": {
     "express": "^4.17.1",
     "express-posthtml": "^1.1.0",
+    "jest": "^24.9.0",
     "posthtml": "^0.11.6",
     "posthtml-bem": "^0.2.2",
     "posthtml-expressions": "^1.1.1",

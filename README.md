@@ -32,7 +32,7 @@ yarn start <path_to_dir>
 ### Запуск тестов
 ```
 yarn 
-yarn run test
+yarn test
 ```
 
 ### Тестируемые модули
